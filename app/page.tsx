@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Plan from "./components/Plan";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
+import { FaPhone } from "react-icons/fa";
 
 export default function Home() {
   const containerVariants = {
@@ -28,30 +29,33 @@ export default function Home() {
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl uppercase"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
-            Welcome to <span className="text-green-500 font-bold">Solar Roof</span>
+            Welcome to <span className="text-green-500 font-bold text-5xl">Solar Roof</span>
           </motion.p>
 
           <motion.h1
             className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] text-start font-bold"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
             We find the highest and best use for all resources
           </motion.h1>
 
-          {/* Button Section */}
+          
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            
             <motion.button
-              className="border-2 border-green-500 px-4 sm:px-8 py-2 sm:py-3 hover:bg-green-700"
-              initial={{ scale: 0 }}
+             className="flex items-center space-x-2 border-2 border-green-500 px-4 sm:px-8 py-2 sm:py-3 text-white hover:bg-green-700 hover:text-white transition-all duration-300 ease-in-out"
+             initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
-            >
-              CONTACT US
+>             
+             <span>CONTACT US</span>
+             <FaPhone className="text-lg" />
             </motion.button>
+
             <motion.button
               className="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700"
               initial={{ scale: 0 }}
