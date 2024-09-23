@@ -4,7 +4,7 @@ import Plan from "./components/Plan";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import { FaPhone } from "react-icons/fa";
-import Testimonials from "./components/Testimonals";
+// import Testimonials from "./components/Testimonals";
 import About from "./components/About";
 import { Link as ScrollLink } from 'react-scroll';
 // import { useRouter } from "next/navigation";
@@ -92,7 +92,7 @@ export default function Home() {
       <About/>
       <Plan />
       <Services />
-      <Testimonials/>   
+      {/* <Testimonials/>    */}
     </div>
   );
 }
