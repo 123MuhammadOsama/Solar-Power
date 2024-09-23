@@ -4,6 +4,8 @@ import Plan from "./components/Plan";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import { FaPhone } from "react-icons/fa";
+import Testimonials from "./components/Testimonals";
+import About from "./components/About";
 
 export default function Home() {
   const containerVariants = {
@@ -15,13 +17,14 @@ export default function Home() {
     <div>
       <Navbar />
       <motion.div
-        className="bg-hero-pattern bg-cover h-screen relative"
+        className="bg-hero-pattern bg-cover bg-center  relative lg:h-screen h-[70vh]"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         transition={{ duration: 0.5 }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        
+        <div className="absolute inset-0 bg-black opacity-10"></div>
 
         {/* Content Section */}
         <div className="relative text-white py-12 px-4 sm:py-16 sm:px-8 md:py-20 md:px-16 lg:py-24 lg:px-32 xl:py-32 xl:px-40 2xl:py-40 2xl:px-48 top-[20%] space-y-4 sm:space-y-6 md:space-y-8">
@@ -44,17 +47,19 @@ export default function Home() {
           </motion.h1>
 
           
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 font-bold">
             
-            <motion.button
-             className="flex items-center space-x-2 border-2 border-green-500 px-4 sm:px-8 py-2 sm:py-3 text-white hover:bg-green-700 hover:text-white transition-all duration-300 ease-in-out"
-             initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
->             
-             <span>CONTACT US</span>
-             <FaPhone className="text-lg" />
-            </motion.button>
+          <motion.button
+  className="flex items-center justify-center border-2 border-green-500 px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base hover:bg-green-700 text-center"
+  initial={{ scale: 0 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 0.5 }}
+>
+  CONTACT US
+  <FaPhone className="ml-2 text-base sm:text-lg" />
+</motion.button>
+
+
 
             <motion.button
               className="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700"
@@ -67,8 +72,10 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
+      <About/>
       <Plan />
       <Services />
+      <Testimonials/>   
     </div>
   );
 }
