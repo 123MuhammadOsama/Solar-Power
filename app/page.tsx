@@ -19,7 +19,7 @@ export default function Home() {
   // const router = useRouter();
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
       <motion.div
         className="bg-hero-pattern bg-cover bg-center  relative lg:h-screen h-[70vh]"
