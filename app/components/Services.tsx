@@ -16,7 +16,7 @@ const fadeInRight = {
 
 const ServiceWithTimeline = () => {
   return (
-    <div className='relative flex flex-col items-center gap-20 my-40 bg-white'>
+    <div id="services-section" className='relative flex flex-col items-center gap-20 my-40 bg-white'>
       <div className='flex flex-col text-center'>
         <h1 className='text-4xl font-bold'>Our Services</h1>
         <p className='w-96 mt-10 mx-auto text-base sm:text-lg'>

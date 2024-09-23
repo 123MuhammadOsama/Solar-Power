@@ -6,12 +6,17 @@ import Navbar from "./components/Navbar";
 import { FaPhone } from "react-icons/fa";
 import Testimonials from "./components/Testimonals";
 import About from "./components/About";
+import { Link as ScrollLink } from 'react-scroll';
+// import { useRouter } from "next/navigation";
+
 
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
+
+  // const router = useRouter();
 
   return (
     <div>
@@ -24,7 +29,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
       >
         
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
 
         {/* Content Section */}
         <div className="relative text-white py-12 px-4 sm:py-16 sm:px-8 md:py-20 md:px-16 lg:py-24 lg:px-32 xl:py-32 xl:px-40 2xl:py-40 2xl:px-48 top-[20%] space-y-4 sm:space-y-6 md:space-y-8">
@@ -50,25 +55,37 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 font-bold">
             
           <motion.button
-  className="flex items-center justify-center border-2 border-green-500 px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base hover:bg-green-700 text-center"
-  initial={{ scale: 0 }}
-  animate={{ scale: 1 }}
-  transition={{ duration: 0.5 }}
->
-  CONTACT US
-  <FaPhone className="ml-2 text-base sm:text-lg" />
-</motion.button>
+            className="flex items-center justify-center border-2 border-green-500 px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base hover:bg-green-700 text-center"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+  
+            >
+              CONTACT US
+              <FaPhone className="ml-2 text-base sm:text-lg" />
+            </motion.button>
 
-
+            <ScrollLink
+              to="services-section"
+              smooth={true}
+              duration={500}
+              offset={-70}
+            >
 
             <motion.button
               className="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
+              
             >
-              ABOUT COMPANY
+              
+              
+              OUR SERVICES
             </motion.button>
+
+            </ScrollLink>
+            
           </div>
         </div>
       </motion.div>
