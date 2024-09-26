@@ -1,4 +1,4 @@
-'use client'
+// 'use client';
 // import { motion } from "framer-motion";
 import Plan from "./components/Plan";
 import Services from "./components/Services";

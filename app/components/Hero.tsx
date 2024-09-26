@@ -41,27 +41,28 @@ const Hero = () => {
         </motion.h1>
 
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 font-bold">
-          <motion.button
-            className="w-fit flex items-center justify-center border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3  hover:bg-green-700 text-center"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            CONTACT US
-            <FaPhone className="ml-2 text-base sm:text-lg" />
-          </motion.button>
+  <motion.button
+    className="w-40 sm:w-fit flex items-center justify-center border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700 text-center"
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 0.5 }}
+  >
+    CONTACT US
+    <FaPhone className="ml-2 text-base sm:text-lg" />
+  </motion.button>
 
-          <ScrollLink to="services-section" smooth={true} duration={500} offset={-70}>
-            <motion.button
-              className="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              OUR SERVICES
-            </motion.button>
-          </ScrollLink>
-        </div>
+  <ScrollLink to="services-section" smooth={true} duration={500} offset={-70}>
+    <motion.button
+      className="w-40 sm:w-fit border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 hover:bg-green-700"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      OUR SERVICES
+    </motion.button>
+  </ScrollLink>
+</div>
+
       </div>
     </motion.div>
   );
